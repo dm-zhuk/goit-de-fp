@@ -43,7 +43,7 @@ services:
       bash -c "pip install requests && 
       /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077"
     environment:
-      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_MEMORY=512M
       - SPARK_WORKER_CORES=1
     volumes:
       - .:/opt/airflow/task2_batch
